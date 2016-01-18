@@ -1,11 +1,11 @@
-
+"use strict";
 
 var contentController = {};
 var db = require("../db/knexDB.js");
 
-contentController.getContentList = function () {
+contentController.getContentList = function (req, res) {
 
-    data = {};
+    var data = {};
 
     db().select().from("blog_post")
     .then(function (result) {

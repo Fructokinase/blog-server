@@ -3,8 +3,8 @@ var db = require("knex")({
     client: "postgres",
     connection: {
         host: "trailandcook-db.cxjxa0ftupoy.us-west-2.rds.amazonaws.com",
-        user: "fructokinase",
-        password: "4str0cyt3",
+        user: process.env.AWS_RDS_trailandcook_user,
+        password: process.env.AWS_RDS_trailandcook_password,
         database: "trailandcook",
         port: 5432,
         dateStrings: true
