@@ -17,6 +17,7 @@ contentController.getContentList = function (req, res) {
     .catch(function (err) {
         data.message_code = 500;
         data.message = "Internal server error";
+        data.error = err;
         res.status(500).json(data);
     });
 }
