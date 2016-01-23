@@ -9,6 +9,9 @@ contentController.getContentList = function (req, res) {
     var data = {};
 
     db().select().from("blog_post")
+    .where({
+        show_on_blog: true
+    })
     .then(function (result) {
         data.result = result;
         data.message_code = 200;
