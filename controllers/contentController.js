@@ -10,7 +10,7 @@ contentController.getContentList = function (req, res) {
 
     db().select().from("blog_post")
     .where({
-        show_on_blog: true
+        show_on_blog: req.query.show_on_blog || true 
     })
     .then(function (result) {
         data.result = result;
