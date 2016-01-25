@@ -36,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/getBlogList', contentController.getContentList);
 app.post('/postBlog', contentController.postBlog);
 app.get('/getPictureByBlogId', contentController.getPictureByBlogId);
+app.delete('/deleteBlogById', contentController.deleteBlogById);
 //contentController.getContentList();
 
 // catch 404 and forward to error handler
