@@ -16,6 +16,7 @@ var resJsonWithStatusCode = require("./middlewares/resJsonWithStatusCode");
 
 //controllers
 var contentController = require('./controllers/contentController');
+var commentController = require('./controllers/commentController');
 
 var app = express();
 
@@ -34,9 +35,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //routes
 app.get('/getBlogList', contentController.getContentList);
+app.get('/getComments', commentController.getComments);
 app.post('/postBlog', contentController.postBlog);
+app.post('/postComment', commentController.postComment);
+app.put('/likeComment', commentController.likeComment);
 app.get('/getPictureByBlogId', contentController.getPictureByBlogId);
 app.delete('/deleteBlogById', contentController.deleteBlogById);
+app.delete('/deleteComment', commentController.deleteComment);
 //contentController.getContentList();
 
 // catch 404 and forward to error handler
