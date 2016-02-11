@@ -38,7 +38,7 @@ app.get('/getBlogList', contentController.getContentList);
 app.get('/getComments', commentController.getComments);
 app.post('/postBlog', contentController.postBlog);
 app.post('/postComment', commentController.postComment);
-app.put('/likeComment', commentController.likeComment);
+app.post('/likeComment', commentController.likeComment);
 app.get('/getPictureByBlogId', contentController.getPictureByBlogId);
 app.delete('/deleteBlogById', contentController.deleteBlogById);
 app.delete('/deleteComment', commentController.deleteComment);

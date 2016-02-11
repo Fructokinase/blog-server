@@ -101,7 +101,7 @@ commentController.likeComment = function (req, res) {
         data.message_code = 200;
         data.message = "ok";
         res.header("Access-Control-Allow-Origin", "*");
-        res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+        res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
         res.header("Access-Control-Allow-Headers", "Content-Type");
         res.status(200).json(data);
     })
@@ -110,7 +110,7 @@ commentController.likeComment = function (req, res) {
         data.message = "Internal server error";
         data.error = err;
         res.header("Access-Control-Allow-Origin", "*");
-        res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE");
+        res.header("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,OPTIONS");
         res.header("Access-Control-Allow-Headers", "Content-Type");
         res.status(500).json(data);
         console.log(err)
