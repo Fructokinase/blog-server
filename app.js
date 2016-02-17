@@ -34,7 +34,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //routes
+app.get('/getBlogDetail', contentController.getBlogDetail);
 app.get('/getBlogList', contentController.getContentList);
+app.get('/getBlogQuickList', contentController.getBlogList);
 app.get('/getComments', commentController.getComments);
 app.post('/postBlog', contentController.postBlog);
 app.post('/postComment', commentController.postComment);
