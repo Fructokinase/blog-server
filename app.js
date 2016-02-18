@@ -41,6 +41,7 @@ app.get('/getComments', commentController.getComments);
 app.post('/postBlog', contentController.postBlog);
 app.post('/postComment', commentController.postComment);
 app.post('/likeComment', commentController.likeComment);
+app.post('/editBlog', contentController.editBlog);
 app.get('/getPictureByBlogId', contentController.getPictureByBlogId);
 app.delete('/deleteBlogById', contentController.deleteBlogById);
 app.delete('/deleteComment', commentController.deleteComment);
