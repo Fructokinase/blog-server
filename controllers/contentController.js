@@ -9,9 +9,16 @@ contentController.getContentList = function (req, res) {
 
     var data = {};
 
+    var from = moment(moment(req.query.created_on, "X").format("YYYY-MM"),"YYYY-MM").format("X");
+    var end = moment(req.query.created_on, "X").add(1,"months").format("X") - 1;
+
+
     db().select().from("blog_post")
     .where({
-        show_on_blog: req.query.show_on_blog || true 
+        show_on_blog: req.query.show_on_blog || true
+    })
+    .andWhere(function(){
+        this.where('created_on', '>', from).andWhere('created_on', '<', end);
     })
     .then(function (result) {
         data.result = result;
