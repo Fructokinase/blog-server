@@ -17,6 +17,7 @@ var resJsonWithStatusCode = require("./middlewares/resJsonWithStatusCode");
 //controllers
 var contentController = require('./controllers/contentController');
 var commentController = require('./controllers/commentController');
+var searchController = require('./controllers/searchController');
 
 var app = express();
 
@@ -38,6 +39,7 @@ app.get('/getBlogDetail', contentController.getBlogDetail);
 app.get('/getBlogList', contentController.getContentList);
 app.get('/getBlogQuickList', contentController.getBlogList);
 app.get('/getComments', commentController.getComments);
+app.get('/searchBlogList', searchController.filterByTags);
 app.post('/postBlog', contentController.postBlog);
 app.post('/postComment', commentController.postComment);
 app.post('/likeComment', commentController.likeComment);
