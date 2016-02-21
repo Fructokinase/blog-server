@@ -18,10 +18,10 @@
     "serve-favicon": "~2.2.0"
   },
   "engines":{
-    "node": "4.1.1"
+    "node": "5.3.0"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/heroku/Fructokinase/blog-server"
+    "url": "https://git.heroku.com/trailandcook.git"
   }
 }
