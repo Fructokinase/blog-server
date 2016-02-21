@@ -1,6 +1,8 @@
 /**
  * Module dependencies.
  */
+
+ console.log("top")
  
 var http = require('http');
 var debug = require('debug')('blog-server:server');
