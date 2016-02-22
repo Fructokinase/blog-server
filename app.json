@@ -1,0 +1,8 @@
+{
+  "name": "trailandcook blog server",
+  "description": "This is the api server for trailandcook.com",
+  "repository": "https://git.heroku.com/trailandcook.git",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}
