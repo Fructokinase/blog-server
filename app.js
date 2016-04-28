@@ -17,6 +17,7 @@ var bodyParser = require('body-parser');
 var resJsonWithStatusCode = require("./middlewares/resJsonWithStatusCode");
 
 //controllers
+var authController = require('./controllers/authController');
 var contentController = require('./controllers/contentController');
 var commentController = require('./controllers/commentController');
 var searchController = require('./controllers/searchController');
@@ -49,6 +50,7 @@ app.post('/postBlog', contentController.postBlog);
 app.post('/postComment', commentController.postComment);
 app.post('/likeComment', commentController.likeComment);
 app.post('/editBlog', contentController.editBlog);
+app.post('/signin', authController.signin);
 app.get('/getPictureByBlogId', contentController.getPictureByBlogId);
 app.delete('/deleteBlogById', contentController.deleteBlogById);
 app.delete('/deleteComment', commentController.deleteComment);
@@ -162,7 +164,6 @@ function onListening() {
 /**
  * Listen on provided port, on all network interfaces.
  */
-
 server.listen(port);
 console.log("server started!")
 server.on('error', onError);
